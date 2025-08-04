@@ -1,0 +1,99 @@
+<!--
+  Copyright 2025 abdur
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+      https://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManzWeb - Personal Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-containt">
+        <div class="nav-logo"><a href="#">Manzweb.my.id</a></div>
+        <div class="nav-items" id="nav-items">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#link">Link</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="menu" id="menu-toggle">
+          <span class="material-symbols-outlined" id="menu-icon">menu</span>
+        </div>
+      </div>
+    </nav>
+
+    <div id="overlay"></div>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navItems = document.getElementById("nav-items");
+      const menuIcon = document.getElementById("menu-icon");
+      const overlay = document.getElementById("overlay");
+
+      // Toggle menu dan overlay saat tombol menu diklik
+      menuToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navItems.classList.toggle("active");
+        overlay.classList.toggle("active");
+        menuIcon.textContent = navItems.classList.contains("active")
+          ? "close"
+          : "menu";
+      });
+
+      // Tutup menu saat salah satu link diklik
+      document.querySelectorAll(".nav-items ul li a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navItems.classList.remove("active");
+          overlay.classList.remove("active");
+          menuIcon.textContent = "menu";
+        });
+      });
+
+      // Tutup menu jika klik di luar
+      document.addEventListener("click", (e) => {
+        const isClickInsideMenu = navItems.contains(e.target);
+        const isClickOnToggle = menuToggle.contains(e.target);
+
+        if (
+          !isClickInsideMenu &&
+          !isClickOnToggle &&
+          navItems.classList.contains("active")
+        ) {
+          navItems.classList.remove("active");
+          overlay.classList.remove("active");
+          menuIcon.textContent = "menu";
+        }
+      });
+    </script>
+  </body>
+</html>
