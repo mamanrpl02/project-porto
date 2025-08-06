@@ -148,6 +148,11 @@ body {
   border-radius: 5px;
   font-weight: 800;
   letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.about-container a:hover{
+  background-color: #fff;
 }
 
 /* Project */
@@ -174,6 +179,7 @@ body {
   border-radius: 0;
   border-radius: 10px;
   border: 1px solid #1a1f2a;
+  transition: 0.5s;
 }
 
 .project-card .content-project .project-type {
