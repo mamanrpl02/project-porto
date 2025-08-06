@@ -1,7 +1,30 @@
+/**
+ * Copyright 2025 abdur
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {
@@ -76,7 +99,6 @@ body {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
-
 .nav-items ul li a:hover {
   color: #fff;
 }
@@ -87,122 +109,86 @@ body {
   cursor: pointer;
 }
 
-.containter-hero {
-  display: flex;
-  /* background-color: #0d1117; */
-  padding: 0 7rem;
-  gap: 5rem;
-  justify-content: space-between;
+/* About Page Start */
+#about {
+  padding: 4rem 7rem;
   align-items: center;
 }
 
-.containter-hero .kiri {
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  width: 50rem;
-}
-
-.containter-hero .kiri p {
-  font-size: 1rem;
-}
-
-.containter-hero .kiri h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 3.3rem;
-  padding-bottom: 0.8rem;
-}
-
-/* CSS About */
-
-.section-about {
-  background-color: rgb(13, 17, 23);
-  font-family: "Poppins", sans-serif;
-  padding-top: 1.5rem;
-  /* border-top: 1px solid rgba(255, 255, 255, 0.468);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.468); */
-  transform: skewY(-2deg);
-  box-shadow: 
-    /* Bayangan di bawah */ 0 8px 10px rgba(0, 0, 0, 0.5),
-    0 16px 20px rgba(0, 0, 0, 0.4), 0 24px 30px rgba(0, 0, 0, 0.3),
-    /* Bayangan di atas (dengan offset negatif) */ 0 -8px 10px rgba(0, 0, 0, 0.5),
-    0 -16px 20px rgba(0, 0, 0, 0.4), 0 -24px 30px rgba(0, 0, 0, 0.3);
-}
-
-.about-container {
-  padding: 2rem 7rem;
+.cointain-about {
   width: 90%;
-  transform: skewY(2deg); /* Membalikan kemiringan agar konten tetap lurus */
+  color: #fff;
 }
 
-.about-container p {
-  margin-bottom: 1.2rem;
-  letter-spacing: 1px;
+.cointain-about h1 {
+  font-size: 2.9rem;
+  font-weight: 600;
+  font-family: "Commissioner", monospace;
+  margin-bottom: 1rem;
 }
-.about-container a {
-  text-decoration: none;
-  /* color: white; */
-  color: #0d1117;
-  background-color: #c9d1d9;
-  padding: 0.5rem;
-  border-radius: 5px;
+
+.cointain-about h1 span {
+  color: #050608;
+  background-color: #ffffff;
+  padding: 0 15px 0 2px;
   font-weight: 800;
-  letter-spacing: 1px;
+  border-radius: 5px;
 }
 
-/* Project */
-#project {
-  padding: 5rem 7rem;
+.cointain-about p {
+  color: #c9d1d9;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
-.project-container {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+.cointain-about a {
+  color: #050608;
+  text-decoration: none;
+  background-color: #c9d1d9;
+  padding: 0.5rem 0.6rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.cointain-about a:hover {
+  background-color: #fff;
 }
 
-.project-card img {
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
+#details-about {
+  padding: 3rem 7rem;
 }
 
-.project-card {
-  width: 300px;
-  background-color: #1a1f2a;
-  border-radius: 0;
-  border-radius: 10px;
-  border: 1px solid #1a1f2a;
+#details-about .detail-container {
+  color: #fff;
+}
+#details-about .detail-container .education-contain .flex-between .kanan{
+  font-size: 0.7rem;
 }
 
-.project-card .content-project .project-type {
-  margin: 1rem 1rem;
+.detail-container .education-contain h1 {
+  padding-bottom: 5px;
 }
 
-.project-card .content-project .project-type h1 {
-  font-size: 0.9rem;
+.detail-container .hardskil-contain h1 {
+  padding-bottom: 5px;
 }
-.project-card .content-project .project-type p {
-  font-size: 0.6rem;
-  font-weight: 200;
+.detail-container .hardskil-contain span {
   color: #c9d1d9;
 }
-.project-card:hover {
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.42),
-    /* Bayangan utama yang halus */ 0 0 10px rgba(255, 255, 255, 0.42),
-    /* Lapisan kedua yang lebih lebar dan samar */ 0 0 15px
-      rgba(255, 255, 255, 0.42); /* Lapisan ketiga yang lebih besar lagi */
+
+.detail-container .softskill-contain h1 {
+  padding-bottom: 5px;
 }
 
-.content-project {
-  padding: 1rem;
-  border-radius: 5px;
+.detail-container .experience-contain h1 {
+  padding-bottom: 5px;
 }
-.content-project p {
-  font-size: 0.7rem;
-  letter-spacing: 1px;
+
+.detail-container .item {
+  margin-bottom: 2rem;
 }
+
+/* About Page End */
 
 /* buyme a coffee */
 .buyMe {
@@ -308,16 +294,6 @@ body {
   }
   .nav-items ul li a:hover {
     color: aqua;
-  }
-
-  .containter-hero {
-    padding: 0 2rem;
-    gap: 5rem;
-  }
-
-  /* hero */
-  .containter-hero {
-    display: block;
   }
 
   .buyMe {
