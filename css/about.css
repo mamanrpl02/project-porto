@@ -30,6 +30,7 @@ body {
   background-attachment: fixed; /* Warna teks */
   color: #c9d1d9;
   font-family: "Poppins", sans-serif;
+  padding-bottom: 9rem;
 } /* Navbar */
 .navbar {
   background-color: transparent;
@@ -137,6 +138,27 @@ body {
   padding-left: 1rem;
 
 }
+
+/* experience */
+/* paskibra */
+.experiance-contain .paskibraka-section .paskib-title {
+  display: flex;
+  align-items: center;
+
+}
+/* paskibra end */
+
+
+/* magang-pt-inovindo */
+.experiance-contain .magang-section .magang-title {
+  display: flex;
+  align-items: center;
+}
+
+
+/* magang inovindo end */
+
+/* experience end*/
 
 
 
