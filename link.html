@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ManzWeb - Personal Portfolio</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/link.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,107 +53,59 @@
       </div>
     </nav>
 
-    <div class="intro" role="dialog" aria-modal="true" aria-label="Intro">
+    <!-- Intro overlay (shows only on first visit) -->
+    <!-- <div class="intro" role="dialog" aria-modal="true" aria-label="Intro">
       <div class="intro__inner">
-        <div class="logo"></div>
-        <h1 class="title">Ciee kepo yakkk...</h1>
-        <p class="subtitle">Menyiapkan pengalaman terbaik untukmu…</p>
-        <div class="dots">
+        <div class="logo" aria-hidden="true"></div>
+        <h1 class="title" style="font-size: 1.5rem; font-weight: 800">
+          Temukan aku di semua sosmed
+        </h1>
+        <p class="subtitle">Biar makin dekat, follow semua sosmed aku...</p>
+        <div class="dots" aria-label="Memuat">
           <div class="dot"></div>
           <div class="dot"></div>
           <div class="dot"></div>
         </div>
         <div class="actions">
-          <button class="btn" id="skipIntro" type="button">Lewati</button>
+          <button
+            class="btn"
+            id="skipIntro"
+            type="button"
+            aria-label="Lewati intro"
+          >
+            Lewati
+          </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <section id="#" class="hero">
-      <div class="containter-hero">
-        <div class="item kiri">
-          <h1>Passionate Junior Developer,</h1>
+    <section id="manzweb-sosmed" class="sosmed-section">
+      <div class="sosmed-content">
+        <div class="sosmed-title">
+          <h2 class="c-white-1">Sosial Media</h2>
           <p>
-            As a Vocational High School graduate, I have a strong foundation in
-            technology
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Praesentium necessitatibus hic nulla rem blanditiis. Ratione. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita
+            nobis tenetur!
           </p>
         </div>
-        <img src="hero.png" alt="manz-web-image" class="item kanan" />
-      </div>
-    </section>
+        <div class="sosmed-items">
+          <img src="img/instagram.png" alt="Manzweb-ig" />
+            <a href="#">Instagram</a>
+        </div>
 
-    <section class="section-about">
-      <div class="about-container">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro qui
-          quas repellat debitis odio consequatur doloribus inventore quae,
-          tempora hic!
-        </p>
-        <a href="about.html">About Me</a>
-      </div>
-    </section>
-
-    <section id="project">
-      <h2 class="judul">My Projects</h2>
-      <div class="project-container">
-        <div class="project-card">
-          <img src="fake1.png" alt="project1-image" class="project-image" />
-          <div class="content-project">
-            <h3>Project 1</h3>
-            <p>
-              Project 1 description Lorem ipsum dolor sit amet. Lorem, ipsum.
-            </p>
-            <div class="desk-project">
-              <div class="project-type">
-                <h1>Web</h1>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-              <div class="tech-stack">
-                <h1>Web</h1>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-            </div>
+        <div class="sosmed-items">
+          <img src="img/instagram.png" alt="Manzweb-ig" />
+          <div class="sosmedname">
+            <a href="#">Instagram</a>
           </div>
         </div>
 
-        <div class="project-card">
-          <img src="fake2.png" alt="project1-image" class="project-image" />
-          <div class="content-project">
-            <h3>Project 1</h3>
-            <p>
-              Project 1 description Lorem ipsum dolor sit, amet consectetur
-              adipisicing.
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="fake2.png" alt="project1-image" class="project-image" />
-          <div class="content-project">
-            <h3>Project 1</h3>
-            <p>
-              Project 1 description Lorem ipsum dolor sit, amet consectetur
-              adipisicing.
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="fake2.png" alt="project1-image" class="project-image" />
-          <div class="content-project">
-            <h3>Project 1</h3>
-            <p>
-              Project 1 description Lorem ipsum dolor sit, amet consectetur
-              adipisicing.
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="fake2.png" alt="project1-image" class="project-image" />
-          <div class="content-project">
-            <h3>Project 1</h3>
-            <p>
-              Project 1 description Lorem ipsum dolor sit, amet consectetur
-              adipisicing.
-            </p>
+        <div class="sosmed-items">
+          <img src="img/instagram.png" alt="Manzweb-ig" />
+          <div class="sosmedname">
+            <a href="#">Instagram</a>
           </div>
         </div>
       </div>
@@ -209,6 +161,6 @@
       });
     </script>
 
-    <script src="js/introsection.js"></script>
+    <script src="js/intro.js"></script>
   </body>
 </html>

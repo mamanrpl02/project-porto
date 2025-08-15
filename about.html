@@ -41,7 +41,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#link">Link</a></li>
+            <li><a href="link.html">Social Media</a></li>
             <li><a href="#project">Project</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -62,11 +62,16 @@
           amet consectetur adipisicing elit. Iusto expedita facilis fugit
           repudiandae impedit nam quos aperiam atque provident perferendis.
         </p>
-        <a href="#">Connect on Linkedin</a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/abdurrahman-hidayat-581265293/"
+          >Connect on Linkedin</a
+        >
       </div>
     </section>
+
     <section id="details-about">
-      <div class="detail-container">
+      <div class="detail-container pt-3rm">
         <!-- educaion -->
         <div class="education-contain">
           <h1 class="c-white-1">Education</h1>
@@ -108,9 +113,12 @@
 
           <div class="paskibraka-section">
             <div class="paskib-title">
-              <h3 class="c-white-1">Paskibraka</h3>
-              <h3>(Organisasi)</h3>
-              <p class="c-white-2 ml-1rm">Pasukan Pengibar Bendera Hut RI 78</p>
+              <h3 class="c-white-1">
+                Paskibraka <span class="c-whtie-2">(Organisasi)</span>
+              </h3>
+              <a href="#" class="c-white-2"
+                >Pasukan Pengibar Bendera Hut RI 78</a
+              >
             </div>
             <div class="paskib-list">
               <ul class="ml-2rm">
@@ -138,11 +146,46 @@
 
           <div class="magang-section pt-1rm">
             <div class="magang-title">
-              <h3 class="c-white-1">PT. INOVINDO DIGITAL MEDIA</h3>
-              <h3 class="c-whiteE-2">(Magang)</h3>
-              <p class="c-white-2 ml-1rm">
+              <h3 class="c-white-1">
+                PT. INOVINDO DIGITAL MEDIA
+                <span class="c-white-2">(Magang)</span>
+              </h3>
+              <a href="#" class="c-white-2">
                 Web Developer Intern Bandung, 10 Sept - 11 Dec 2023
-              </p>
+              </a>
+            </div>
+            <div class="magang-list">
+              <ul class="ml-2rm">
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos quisquam deleniti harum?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quos, animi excepturi? Repellat, iste.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Saepe quibusdam distinctio nobis, suscipit beatae in.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="magang-section pt-1rm">
+            <div class="magang-title">
+              <h3 class="c-white-1">
+                PT. FATH SINERGY GROUP
+                <span class="c-white-2">(Magang Online In School)</span>
+              </h3>
+              <a href="#" class="c-white-2">
+                UI/UX Designer Intern Bandung, 10 Sept - 11 Dec 2023
+              </a>
             </div>
             <div class="magang-list">
               <ul class="ml-2rm">
@@ -175,20 +218,31 @@
         <div class="hardskil-contain mt-2rm">
           <h1 class="c-white-1">Hard Skills</h1>
           <p class="language">
-            <span>Language :</span> Proficient in PHP, HTML/CSS, JavaScript.
+            Language :
+            <span class="c-white-1 fw-600">
+              Proficient in PHP, HTML/CSS, JavaScript.</span
+            >
           </p>
           <p class="framework">
-            <span>Framework :</span> Laravel, Bootsrap, Tailwind, React.js
+            Framework :
+            <span class="c-white-1 fw-600">
+              Laravel, Bootsrap, Tailwind, React.js</span
+            >
           </p>
-          <p class="database"><span> Database :</span> MySQL</p>
+          <p class="database">
+            Database : <span class="c-white-1 fw-600"> MySQL</span>
+          </p>
           <p class="familiar-tools">
-            <span>Familiars Tools :</span> Visual Studio Code, Git, Laragon,
-            XAMPP, Figma, Canva, Ms. Office .
+            Familiars Tools :
+            <span class="c-white-1 fw-600">
+              Visual Studio Code, Git, Laragon, XAMPP, Figma, Canva, Ms. Office
+              .</span
+            >
           </p>
         </div>
         <!-- Soft Skils -->
-        <div class="softskill-contain item">
-          <h1>Soft Skills</h1>
+        <div class="softskill-contain mt-2rm">
+          <h1 class="c-white-1">Soft Skills</h1>
           <p>
             Communication, Teamwork, Problem Solving, Discipline, Time
             Management.
@@ -208,7 +262,15 @@
       const menuToggle = document.getElementById("menu-toggle");
       const navItems = document.getElementById("nav-items");
       const menuIcon = document.getElementById("menu-icon");
-      const overlay = document.getElementById("overlay"); // Toggle menu dan overlay saat tombol menu diklik menuToggle.addEventListener("click", (e) => { e.stopPropagation(); navItems.classList.toggle("active"); overlay.classList.toggle("active"); menuIcon.textContent = navItems.classList.contains("active") ? "close" : "menu"; }); // Tutup menu saat salah satu link diklik document.querySelectorAll(".nav-items ul li a").forEach((link) => { link.addEventListener("click", () => { navItems.classList.remove("active"); overlay.classList.remove("active"); menuIcon.textContent = "menu"; }); }); // Tutup menu jika klik di luar document.addEventListener("click", (e) => { const isClickInsideMenu = navItems.contains(e.target); const isClickOnToggle = menuToggle.contains(e.target); if ( !isClickInsideMenu && !isClickOnToggle && navItems.classList.contains("active") ) { navItems.classList.remove("active"); overlay.classList.remove("active"); menuIcon.textContent = "menu"; } });
+      const overlay = document.getElementById("overlay");
+      menuToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navItems.classList.toggle("active");
+        overlay.classList.toggle("active");
+        menuIcon.textContent = navItems.classList.contains("active")
+          ? "close"
+          : "menu";
+      }); // Tutup menu saat salah satu link diklik document.querySelectorAll(".nav-items ul li a").forEach((link) => { link.addEventListener("click", () => { navItems.classList.remove("active"); overlay.classList.remove("active"); menuIcon.textContent = "menu"; }); }); // Tutup menu jika klik di luar document.addEventListener("click", (e) => { const isClickInsideMenu = navItems.contains(e.target); const isClickOnToggle = menuToggle.contains(e.target); if ( !isClickInsideMenu && !isClickOnToggle && navItems.classList.contains("active") ) { navItems.classList.remove("active"); overlay.classList.remove("active"); menuIcon.textContent = "menu"; } });
     </script>
   </body>
 </html>
