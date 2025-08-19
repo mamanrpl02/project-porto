@@ -156,6 +156,7 @@ body {
 }
 
 /* Project */
+
 #project {
   padding: 5rem 7rem;
 }
@@ -168,31 +169,39 @@ body {
   justify-content: center;
 }
 
-.project-card img {
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
-}
-
 .project-card {
   width: 300px;
   background-color: #1a1f2a;
-  border-radius: 0;
   border-radius: 10px;
   border: 1px solid #1a1f2a;
   transition: 0.5s;
 }
 
-.project-card .content-project .project-type {
-  margin: 1rem 1rem;
+.project-card img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
 }
 
-.project-card .content-project .project-type h1 {
-  font-size: 0.9rem;
+/* .project-container .project-card .content-project{
+  height: 150px;
+} */
+
+.project-container .project-card .content-project .desk-project {
+  display: none;
+  margin-top: 1rem;
+  border: 1px solid #1a1f2a;
+  transition: all 0.5s ease;
 }
-.project-card .content-project .project-type p {
-  font-size: 0.6rem;
-  font-weight: 200;
-  color: #c9d1d9;
+.project-container .project-card:hover .content-project .desk-project {
+  display: flex;
+  margin-top: 1rem;
+  border: 1px solid #1a1f2a;
+}
+.project-container .project-card .content-project .desk-project .item {
+  border: 2px solid #828283;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
 }
 .project-card:hover {
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.42),
