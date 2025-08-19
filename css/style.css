@@ -121,7 +121,7 @@ body {
   /* border-top: 1px solid rgba(255, 255, 255, 0.468);
   border-bottom: 1px solid rgba(255, 255, 255, 0.468); */
   transform: skewY(-2deg);
-  background-color: rgb(13, 17, 23);
+  background-color: rgba(13, 17, 23, 0.947);
   box-shadow: 
     /* Bayangan di bawah */ 0 8px 10px rgba(0, 0, 0, 0.5),
     0 16px 20px rgba(0, 0, 0, 0.4), 0 24px 30px rgba(0, 0, 0, 0.3),
@@ -160,60 +160,110 @@ body {
 #project {
   padding: 5rem 7rem;
 }
-
+/* Container utama */
 .project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+ 
+}
+
+/* Card Project */
+.project-card {
+  background: #111215;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+/* Efek hover card */
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(25, 41, 255, 0.3); /* glow neon hijau */
+}
+
+/* Gambar */
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Efek zoom gambar saat hover */
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+/* Konten */
+.content-project {
+  padding: 1.2rem;
+  color: #ddd;
+}
+
+.content-project h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  transition: color 0.3s ease;
+}
+
+/* Sembunyikan desk-project awal */
+.desk-project {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.project-card {
-  width: 300px;
-  background-color: #1a1f2a;
-  border-radius: 10px;
-  border: 1px solid #1a1f2a;
-  transition: 0.5s;
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
-}
-
-/* .project-container .project-card .content-project{
-  height: 150px;
-} */
-
-.project-container .project-card .content-project .desk-project {
-  display: none;
   margin-top: 1rem;
-  border: 1px solid #1a1f2a;
-  transition: all 0.5s ease;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
 }
-.project-container .project-card:hover .content-project .desk-project {
+
+/* Tampilkan saat hover */
+.project-card:hover .desk-project {
+  opacity: 1;
+  max-height: 200px; /* kasih batas biar transisi smooth */
+  transform: translateY(0);
+}
+
+/* Judul berubah warna saat hover */
+.project-card:hover h3 {
+  color: #00a2ff;
+}
+
+.content-project p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #c9d1d9;
+}
+
+/* Bagian deskripsi type/tech */
+.desk-project {
   display: flex;
+  gap: 1rem;
   margin-top: 1rem;
-  border: 1px solid #1a1f2a;
 }
-.project-container .project-card .content-project .desk-project .item {
-  border: 2px solid #828283;
+
+.desk-project .item {
+  border: 2px solid rgba(201, 209, 217, 0.888);
   padding: 0.5rem;
   border-radius: 5px;
-  margin-right: 0.5rem;
-}
-.project-card:hover {
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.42),
-    /* Bayangan utama yang halus */ 0 0 10px rgba(255, 255, 255, 0.42),
-    /* Lapisan kedua yang lebih lebar dan samar */ 0 0 15px
-      rgba(255, 255, 255, 0.42); /* Lapisan ketiga yang lebih besar lagi */
 }
 
-.content-project {
-  padding: 1rem;
-  border-radius: 5px;
+.desk-project .item h4 {
+  font-size: 1rem;
+  color: #00a2ff;
 }
+
+.desk-project .item p {
+  font-size: 0.85rem;
+  color: #c9d1d9;
+}
+
 .content-project p {
   font-size: 0.7rem;
   letter-spacing: 1px;
@@ -375,7 +425,7 @@ body {
   );
   color: var(--fg);
   pointer-events: all;
-  transition: clip-path 300ms var(--easing), opacity 200ms ease-out; /* lebih cepat */
+  transition: clip-path 300ms var(--easing), opacity 300ms ease-out; /* lebih cepat */
   clip-path: inset(0 round 0); /* will animate to reveal page */
 }
 .intro[hidden] {
