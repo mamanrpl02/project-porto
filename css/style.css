@@ -166,7 +166,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
- 
 }
 
 /* Card Project */
@@ -236,7 +235,7 @@ body {
 }
 
 .content-project p {
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: #c9d1d9;
 }
@@ -265,7 +264,7 @@ body {
 }
 
 .content-project p {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 1px;
 }
 
@@ -278,7 +277,6 @@ body {
   position: fixed;
   margin-bottom: 1rem;
 }
-
 .content-buyMe {
   display: flex;
   justify-content: space-between;
@@ -286,8 +284,7 @@ body {
   background-color: rgb(13, 17, 23);
   padding: 1rem 2.5rem;
   border-radius: 5px;
-  box-shadow: 
-    /* Bayangan di bawah */ 0 8px 10px rgba(0, 0, 0, 0.5),
+  box-shadow: /* Bayangan di bawah */ 0 8px 10px rgba(0, 0, 0, 0.5),
     0 16px 20px rgba(0, 0, 0, 0.4), 0 24px 30px rgba(0, 0, 0, 0.3),
     /* Bayangan di atas (dengan offset negatif) */ 0 -8px 10px rgba(0, 0, 0, 0.5),
     0 -16px 20px rgba(0, 0, 0, 0.4), 0 -24px 30px rgba(0, 0, 0, 0.3);
@@ -296,10 +293,15 @@ body {
 .content-buyMe a {
   text-decoration: none;
   color: #c9d1d9;
-  font-weight: 500;
+  font-weight: 800;
   padding: 0.5rem 0.6rem;
   border-radius: 5px;
-  border: 1.5px solid white;
+  border: 1.5px solid #c9d1d9;
+  transition: all 0.3s ease;
+}
+.content-buyMe a:hover {
+  color: rgb(13, 17, 23);
+  background-color: #c9d1d9;
 }
 
 /* Mobile styles */

@@ -1,19 +1,3 @@
-<!--
- Copyright 2025 abdur
- 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- 
-     https://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -41,8 +29,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="link.html">Social Media</a></li>
-            <li><a href="#project">Project</a></li>
+            <li><a href="link.html">Social Media</a></li> 
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -82,7 +69,7 @@
               </h3>
               <p class="jurusan">Major in Software Engineering</p>
               <p class="">Average Report Card Grade: 90/100</p>
-              <ul>
+              <ul class="point-hover">
                 <li>
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing. Lorem
@@ -100,7 +87,7 @@
               </ul>
             </div>
             <div class="kanan">
-              <a href="#">Subang, ID / May 2025</a>
+              <a href="#" class="hover-white">Subang, ID / May 2025</a>
             </div>
           </div>
         </div>
@@ -116,12 +103,13 @@
               <h3 class="c-white-1">
                 Paskibraka <span class="c-whtie-2">(Organisasi)</span>
               </h3>
-              <a href="#" class="c-white-2"
-                >Pasukan Pengibar Bendera Hut RI 78</a
-              >
+              <a href="#" id="manzweb-paskib" class="c-white-2 hover-white"
+                >Pasukan Pengibar Bendera Hut RI 78
+                <i class="bi bi-box-arrow-up-right px-1rm"></i
+              ></a>
             </div>
             <div class="paskib-list">
-              <ul class="ml-2rm">
+              <ul class="ml-2rm point-hover">
                 <li>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -150,12 +138,17 @@
                 PT. INOVINDO DIGITAL MEDIA
                 <span class="c-white-2">(Magang)</span>
               </h3>
-              <a href="#" class="c-white-2">
+              <a
+                href="#"
+                id="manzweb-magang-inovindo"
+                class="c-white-2 hover-white"
+              >
                 Web Developer Intern Bandung, 10 Sept - 11 Dec 2023
+                <i class="bi bi-box-arrow-up-right px-1rm"></i>
               </a>
             </div>
             <div class="magang-list">
-              <ul class="ml-2rm">
+              <ul class="ml-2rm point-hover">
                 <li>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -183,12 +176,17 @@
                 PT. FATH SINERGY GROUP
                 <span class="c-white-2">(Magang Online In School)</span>
               </h3>
-              <a href="#" class="c-white-2">
+              <a
+                href="#"
+                id="manzweb-magang-fathforce"
+                class="c-white-2 hover-white"
+              >
                 UI/UX Designer Intern Bandung, 10 Sept - 11 Dec 2023
+                <i class="bi bi-box-arrow-up-right px-1rm"></i>
               </a>
             </div>
             <div class="magang-list">
-              <ul class="ml-2rm">
+              <ul class="ml-2rm point-hover">
                 <li>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -212,27 +210,45 @@
           </div>
         </div>
 
+        <!-- Modal 1 -->
+        <div id="manzweb-paskib-modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" src="fake1.png" alt="Paskibraka 78" />
+        </div>
+
+        <!-- Modal 2 -->
+        <div id="manzweb-magang1-modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" src="fake2.png" alt="Paskibraka 79" />
+        </div>
+
+        <!-- Modal 3 -->
+        <div id="manzweb-magang2-modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" src="fake1.png" alt="Paskibraka 80" />
+        </div>
+
         <!-- Section Experiance End -->
 
         <!-- Hard Skils -->
         <div class="hardskil-contain mt-2rm">
           <h1 class="c-white-1">Hard Skills</h1>
-          <p class="language">
+          <p class="language hover-biru">
             Language :
             <span class="c-white-1 fw-600">
               Proficient in PHP, HTML/CSS, JavaScript.</span
             >
           </p>
-          <p class="framework">
+          <p class="framework hover-biru">
             Framework :
             <span class="c-white-1 fw-600">
               Laravel, Bootsrap, Tailwind, React.js</span
             >
           </p>
-          <p class="database">
+          <p class="database hover-biru">
             Database : <span class="c-white-1 fw-600"> MySQL</span>
           </p>
-          <p class="familiar-tools">
+          <p class="familiar-tools hover-biru">
             Familiars Tools :
             <span class="c-white-1 fw-600">
               Visual Studio Code, Git, Laragon, XAMPP, Figma, Canva, Ms. Office
@@ -271,6 +287,37 @@
           ? "close"
           : "menu";
       }); // Tutup menu saat salah satu link diklik document.querySelectorAll(".nav-items ul li a").forEach((link) => { link.addEventListener("click", () => { navItems.classList.remove("active"); overlay.classList.remove("active"); menuIcon.textContent = "menu"; }); }); // Tutup menu jika klik di luar document.addEventListener("click", (e) => { const isClickInsideMenu = navItems.contains(e.target); const isClickOnToggle = menuToggle.contains(e.target); if ( !isClickInsideMenu && !isClickOnToggle && navItems.classList.contains("active") ) { navItems.classList.remove("active"); overlay.classList.remove("active"); menuIcon.textContent = "menu"; } });
+    </script>
+    <script>
+      // Fungsi untuk setup modal
+      function setupModal(triggerId, modalId) {
+        const trigger = document.getElementById(triggerId);
+        const modal = document.getElementById(modalId);
+        const closeBtn = modal.querySelector(".close");
+
+        // Klik link → buka modal
+        trigger.addEventListener("click", function (e) {
+          e.preventDefault();
+          modal.style.display = "block";
+        });
+
+        // Klik tombol close → tutup modal
+        closeBtn.addEventListener("click", function () {
+          modal.style.display = "none";
+        });
+
+        // Klik area luar modal → tutup modal
+        window.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      }
+
+      // Setup semua modal
+      setupModal("manzweb-paskib", "manzweb-paskib-modal");
+      setupModal("manzweb-magang-inovindo", "manzweb-magang1-modal");
+      setupModal("manzweb-magang-fathforce", "manzweb-magang2-modal");
     </script>
   </body>
 </html>
