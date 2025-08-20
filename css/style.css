@@ -87,10 +87,14 @@ body {
   cursor: pointer;
 }
 
+.profile-mobile {
+  display: none;
+}
+
 .containter-hero {
   display: flex;
   /* background-color: #0d1117; */
-  padding: 0 7rem;
+  padding: 0 8rem;
   gap: 5rem;
   justify-content: space-between;
   align-items: center;
@@ -113,6 +117,58 @@ body {
   padding-bottom: 0.8rem;
 }
 
+/* Container frame */
+.profile-frame {
+  position: relative;
+  width: 320px;
+  height: 380px;
+  border-radius: 20px; /* rounded rectangle */
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #0d111700,
+    #0d111700 40%,
+    #0ea5e9 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* biar orangnya dari bawah naik */
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Foto */
+.profile-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px; /* ikutin frame */
+  transform: translateY(10px); /* biar lebih natural */
+  transition: transform 0.4s ease;
+}
+
+.profile-frame:hover .profile-img {
+  transform: translateY(0px) scale(1.02);
+}
+
+/* Floating */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-frame {
+    width: 240px;
+    height: 300px;
+  }
+}
+
 /* CSS About */
 
 .section-about {
@@ -121,7 +177,7 @@ body {
   /* border-top: 1px solid rgba(255, 255, 255, 0.468);
   border-bottom: 1px solid rgba(255, 255, 255, 0.468); */
   transform: skewY(-2deg);
-  background-color: rgba(13, 17, 23, 0.947);
+  background-color: rgb(13, 17, 23);
   box-shadow: 
     /* Bayangan di bawah */ 0 8px 10px rgba(0, 0, 0, 0.5),
     0 16px 20px rgba(0, 0, 0, 0.4), 0 24px 30px rgba(0, 0, 0, 0.3),
@@ -130,9 +186,10 @@ body {
 }
 
 .about-container {
-  padding: 2rem 7rem;
+  padding: 2rem 8rem;
   width: 90%;
-  transform: skewY(2deg); /* Membalikan kemiringan agar konten tetap lurus */
+  margin: 0 auto;
+  /* transform: skewY(1deg); */
 }
 
 .about-container p {
@@ -614,12 +671,6 @@ body.is-lock {
 }
 
 /* =========================================
-   RESPONSIVE FIXES
-   ========================================= */
-
-/* Tablet landscape (max 1024px) */
-
-/* =========================================
    RESPONSIVE FIXES (Media Queries)
    ========================================= */
 
@@ -729,11 +780,90 @@ body.is-lock {
     color: #3b82f6;
   }
 
+  #hero{
+    padding: 4rem 0;
+  }
+
   .containter-hero {
-    padding: 0 2rem;
     gap: 5rem;
     display: block;
   }
+
+  .profile-mobile {
+    display: flex;
+  }
+
+  .profile-mobile img {
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  .hero .containter-hero .kanan {
+    display: none;
+  }
+
+  .hero .containter-hero .kiri { 
+  }
+
+  /* Default hidden untuk mobile profile */
+  .profile-mobile {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  /* Foto mobile */
+  .profile-mobile img {
+    width: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Container status (lingkaran + teks) */
+  .status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* jarak antara lingkaran & teks */ 
+  }
+
+  /* Lingkaran hijau animasi */
+  .animasi-lingkaran {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+    animation: pulse 1.5s infinite;
+  }
+
+  /* Teks status */
+  .status p {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #22c55e;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* Animasi pulse */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.6);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
   .buyMe {
     padding: 1rem 2rem;
   }
@@ -750,7 +880,7 @@ body.is-lock {
 
   .containter-hero {
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
     gap: 2rem;
   }
 
@@ -779,7 +909,7 @@ body.is-lock {
 
   .content-project p {
     font-size: 0.85rem;
-  } 
+  }
 
   #contact {
     padding: 3rem 2rem 10rem 2rem;

@@ -43,7 +43,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="link.html">Social Media</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Contact</a></li>
           </ul>
         </div>
         <div class="menu" id="menu-toggle">
@@ -81,38 +81,37 @@
     <section id="manzweb-sosmed" class="sosmed-section">
       <div class="sosmed-content">
         <div class="sosmed-title">
-          <h2 class="c-white-1">Sosial Media</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Praesentium necessitatibus hic nulla rem blanditiis. Ratione. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita
-            nobis tenetur!
-          </p>
+          <h2 class="c-white-1">Find me on social media</h2>
+          <p>learn more about my activities, journey, and background in the</p>
         </div>
-        <div class="sosmed-items">
+        <div
+          class="sosmed-items"
+          data-link="https://www.linkedin.com/in/abdurrahman-hidayat-581265293/"
+        >
           <img src="img/logo/manzweb-linkedind.png" alt="Manzweb-ig" />
-          <a href="https://www.linkedin.com/in/abdurrahman-hidayat-581265293/"
-            >Linkedin</a
-          >
+          <a href="">Linkedin </a>
         </div>
 
-        <div class="sosmed-items">
+        <div
+          class="sosmed-items"
+          data-link="https://www.instagram.com/abdurrahman_730/"
+        >
           <img src="img/logo/manzweb-instagram.png" alt="Manzweb-ig" />
           <div class="sosmedname">
-            <a href="#">Instagram</a>
+            <a href="">Instagram</a>
           </div>
         </div>
 
         <div class="sosmed-items">
           <img src="img/logo/manzweb-tiktok.png" alt="Manzweb-ig" />
           <div class="sosmedname">
-            <a href="#">Instagram</a>
+            <a href="">Tiktok</a>
           </div>
         </div>
         <div class="sosmed-items">
           <img src="img/logo/manzweb-youtube.png" alt="Manzweb-ig" />
           <div class="sosmedname">
-            <a href="#">Instagram</a>
+            <a href="">Youtube</a>
           </div>
         </div>
       </div>
@@ -121,10 +120,21 @@
     <section class="buyMe">
       <div class="content-buyMe">
         <h3>Buy me a coffee</h3>
-        <a href="#">Donate via Saweria</a>
+        <a href="https://saweria.co/abdurrahman730" target="_blank"
+          >Donate via Saweria</a
+        >
       </div>
     </section>
     <div id="overlay"></div>
+
+    <script>
+      document.querySelectorAll(".sosmed-items").forEach((item) => {
+        item.addEventListener("click", () => {
+          const link = item.getAttribute("data-link");
+          if (link) window.open(link, "_blank"); // buka tab baru
+        });
+      });
+    </script>
 
     <script>
       const menuToggle = document.getElementById("menu-toggle");

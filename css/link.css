@@ -243,7 +243,7 @@ body {
     letter-spacing: 1.2px;
   }
   .nav-items ul li a:hover {
-    color: aqua;
+    color: #3b82f6;
   }
   .containter-hero {
     padding: 0 2rem;
@@ -261,7 +261,7 @@ body {
 :root {
   --bg: #0b0f19; /* background behind the intro */
   --fg: #e7eaff; /* text color */
-  --accent: #7c9eff; /* accent for glow */
+  --accent: #3b82f6; /* accent for glow */
   --page-bg: #0f172a; /* actual page background */
   --page-fg: #e2e8f0; /* actual page text */
   --muted: #94a3b8;
@@ -461,5 +461,112 @@ body.is-lock {
   }
   .intro.is-done {
     opacity: 0;
+  }
+}
+
+/* ======================== */
+/*  Tablet (max-width: 991px) */
+/* ======================== */
+@media (max-width: 991px) {
+  #manzweb-sosmed {
+    padding: 2rem 3rem;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-items {
+    padding: 0.6rem 1rem;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-items a {
+    font-size: 1rem;
+  }
+
+  .buyMe {
+    padding: 1rem 3rem;
+  }
+}
+
+/* ======================== */
+/*  Mobile (max-width: 768px) */
+/* ======================== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  #manzweb-sosmed {
+    padding: 2rem;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-title p {
+    font-size: 0.9rem;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-items {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+  }
+
+  .sosmed-section .sosmed-content img {
+    height: 40px;
+  }
+
+  .content-buyMe {  
+    padding: 1rem 1.5rem;
+  } 
+}
+
+/* ======================== */
+/*  Mobile kecil (max-width: 480px) */
+/* ======================== */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  #manzweb-sosmed {
+    padding: 1rem;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-title h2 {
+    font-size: 1.3rem;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-items { 
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .sosmed-section .sosmed-content img {
+    height: 35px;
+  }
+
+  .sosmed-section .sosmed-content .sosmed-items a {
+    font-size: 1rem;
+  }
+
+  .buyMe {
+    padding: 1rem;
+  }
+
+  .content-buyMe {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .content-buyMe h3 {
+    font-size: 1rem;
+  }
+
+  .content-buyMe a {
+    font-size: 0.9rem;
+    padding: 0.6rem;
   }
 }
