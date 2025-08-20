@@ -93,7 +93,7 @@ body {
 
 #about .contain-about a {
   text-decoration: none;
-  background-color: #1b8dff;
+  background-color: #3b82f6;
   color: #c9d1d9;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -102,7 +102,7 @@ body {
 }
 #about .contain-about a:hover {
   color: #fff;
-  background-color: #0080ff;
+  background-color: #3b82f6;
 }
 
 #about .contain-about p {
@@ -112,8 +112,6 @@ body {
 
 /* Details about section*/
 #details-about {
-  /* position: relative;
-  bottom: 0; */
   padding-left: 8rem;
   padding-right: 8rem;
   padding-bottom: 1rem;
@@ -167,9 +165,10 @@ body {
 }
 
 .hover-biru:hover {
-  color: rgb(40, 133, 255);
+  color: #3b82f6;
   font-weight: 700;
 }
+ 
 
 /* magang inovindo end */
 
@@ -220,7 +219,7 @@ body {
   cursor: pointer;
 }
 .close:hover {
-  color: #00a2ff;
+  color: #3b82f6;
 }
 
 /* End Modal */
@@ -322,7 +321,7 @@ body {
     letter-spacing: 1.2px;
   }
   .nav-items ul li a:hover {
-    color: aqua;
+    color: #3b82f6;
   }
   .containter-hero {
     padding: 0 2rem;
@@ -332,7 +331,10 @@ body {
     display: block;
   }
   .buyMe {
-    padding: 2rem;
+    padding: 1rem;
+  }
+  .buyMe {
+    margin-bottom: 0rem;
   }
 }
 
@@ -340,7 +342,7 @@ body {
 :root {
   --bg: #0b0f19; /* background behind the intro */
   --fg: #e7eaff; /* text color */
-  --accent: #7c9eff; /* accent for glow */
+  --accent: #3b82f6; /* accent for glow */
   --page-bg: #0f172a; /* actual page background */
   --page-fg: #e2e8f0; /* actual page text */
   --muted: #94a3b8;
@@ -540,5 +542,77 @@ body.is-lock {
   }
   .intro.is-done {
     opacity: 0;
+  }
+}
+
+/* Responsive di bawah 768px (tablet & HP besar) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  #about {
+    padding: 2rem;
+  }
+
+  #details-about {
+    padding: 2rem;
+  }
+
+  .detail-container .education-contain .edu-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .detail-container .education-contain .edu-flex .kiri,
+  .detail-container .education-contain .edu-flex .kanan {
+    width: 100%;
+  }
+
+  /* Buy Me a Coffee */
+  .buyMe {
+    padding: 1rem;
+  }
+  .buyMe {
+    margin-bottom: 0rem;
+  }
+}
+
+/* Responsive di bawah 576px (HP kecil) */
+@media (max-width: 576px) {
+  #about .contain-about h1 {
+    font-size: 2rem;
+  }
+  #about {
+    padding: 1rem;
+  }
+
+  #details-about {
+    padding: 1rem;
+  }
+
+  .nav-logo a {
+    font-size: 1rem;
+  }
+
+  .content-buyMe {
+    padding: 1rem;
+  }
+  .content-buyMe h3 {
+    font-size: 1rem;
+  }
+  .buyMe {
+    padding: 1rem 2rem;
+  }
+  .buyMe {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (max-width: 438px) {
+  .content-buyMe a {
+    padding: 0.3rem auto;
+    overflow: unset;
   }
 }
